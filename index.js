@@ -4,28 +4,53 @@ import inquirer from "inquirer";
 import generateMarkdown from "./utils/generateMarkdown.js";
 import Choices from "inquirer/lib/objects/choices.js";
 
+/*
+    Done: "Title",
+    Done: "Description",
+    Done: "Table of Contents",
+    Done: "Installation",
+    Done: "Usage",
+    Done: "License",
+    Done: "Contributing",
+    "Tests",
+    "Questions"
+*/
+
+
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: "input",
-        message: "README title:",
+        message: "README Title:",
         name: "title"
     },
     {
         type: "input",
-        message: "Project summary:",
-        name: "summary"
+        message: "Project Description:",
+        name: "description"
     },
     {
         type: "input",
-        message: "Contributors (separate with ','):",
-        name: "contributors"
+        message: "Installation Prerequisites:",
+        name: "installPrerequisites"
+    },
+    {
+        type: "input",
+        message: "Installation Steps*:",
+        name: "installation"
+    },
+    {
+        type: "input",
+        message: "Usage Steps*:",
+        name: "usage"
     },
     {
         type: "list",
         message: "Which license do you choose?",
         name: "license",
         choices: [
+            "none",
             "Apache License 2.0",
             "GNU General Public License v3.0",
             "MIT License",
