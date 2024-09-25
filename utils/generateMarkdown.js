@@ -1,4 +1,4 @@
-
+const endOfLineSymbol = ";";
 
 //  The badge and website links are for: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 
@@ -122,15 +122,21 @@ function generateMarkdown(data) {
   [Questions](#questions)  
 ## Installation
   Prerequisites: ${data.installPrerequisites}  \n\n
-  ${data.installation.split(",").map(element => element.trim()).join("  \n\n")}
+  ${data.installation.split(endOfLineSymbol).map(element => element.trim()).join("  \n\n")}
 ## Usage
-  ${data.usage.split(",").map(element => element.trim()).join("  \n\n")}
+  ${data.usage.split(endOfLineSymbol).map(element => element.trim()).join("  \n\n")}
 ${renderLicenseSection(data.license)}
 ## Contributing
   1. Fork the repository.  
-  2. Create a new branch: git checkout -b feature/branch-name.  
+  2. Create a new branch: ${"```"} git checkout -b feature/branch-name ${"```"}  
   3. Make your changes.  
-  4. Submit a pull request.  
+  4. Submit a pull request.
+## Tests
+  ${data.testSteps.split(endOfLineSymbol).map(element => element.trim()).join("  \n\n")}
+## Questions
+  For any questions, contact here:  
+  ${data.autherName}: ${data.email}  
+  GitHub: [${data.GHUsername}](https://github.com/${data.GHUsername})  
 `;
 }
 
