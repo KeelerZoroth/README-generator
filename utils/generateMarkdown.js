@@ -1,4 +1,4 @@
-
+const endOfLineSymbol = ";";
 
 //  The badge and website links are for: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 
@@ -103,7 +103,6 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   return `## License
-
   [${renderLicenseBadge(license)}](${renderLicenseLink(license)})
   `
 }
@@ -111,11 +110,33 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  ## Description
-  ${data.summary}
-  ## Contributors
-  ${data.contributors.split(",").map(element => element.trim()).join("\n\n")}
-  ${renderLicenseSection(data.license)}
+## Description
+  ${data.description}
+## Table of Contents
+  [Description](#description)  
+  [Installation](#installation)  
+  [Usage](#usage)  
+  [License](#license)  
+  [Contributing](#contributing)  
+  [Tests](#tests)  
+  [Questions](#questions)  
+## Installation
+  Prerequisites: ${data.installPrerequisites}  \n\n
+  ${data.installation.split(endOfLineSymbol).map(element => element.trim()).join("  \n\n")}
+## Usage
+  ${data.usage.split(endOfLineSymbol).map(element => element.trim()).join("  \n\n")}
+${renderLicenseSection(data.license)}
+## Contributing
+  1. Fork the repository.  
+  2. Create a new branch: ${"```"} git checkout -b feature/branch-name ${"```"}  
+  3. Make your changes.  
+  4. Submit a pull request.
+## Tests
+  ${data.testSteps.split(endOfLineSymbol).map(element => element.trim()).join("  \n\n")}
+## Questions
+  For any questions, contact here:  
+  ${data.autherName}: ${data.email}  
+  GitHub: [${data.GHUsername}](https://github.com/${data.GHUsername})  
 `;
 }
 
