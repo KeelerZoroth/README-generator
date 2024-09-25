@@ -1,6 +1,6 @@
 const endOfLineSymbol = ";";
 
-//  The badge and website links are for: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+//  The badge and website links are from: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 
 
 // TODO: Create a function that returns a license badge based on which license is passed in

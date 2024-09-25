@@ -4,7 +4,7 @@ import generateMarkdown from "./generateMarkdown.js";
 import initFuncitons from "./initFuncitons.js";
 import { assert } from "console";
 
-
+// this is a test file to check if the base functionality is fine, but honostly, I don't think I am doing it quite right
 
 try{
 
