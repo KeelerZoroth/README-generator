@@ -1,6 +1,6 @@
 # README Generator
 ## Description
-  This application helps with creating a swift README.md file by asking some questions and filling a new README.md file with your answers. This README.md file was created using this generator.
+  This application helps with creating a swift README.md file by asking some questions and filling a new README.md file with your answers. This README.md file was created using this generator, with some slight modifications afterwards.
 ## Table of Contents
   [Description](#description)  
   [Installation](#installation)  
@@ -21,7 +21,9 @@ Install npm packages: ``` npm i ```
 ## Usage
   Run: ``` node index.js ``` or ``` npm start ```  
 
-Then answer the following questions.
+Then answer the following questions.  
+
+Link on how to use here: https://drive.google.com/file/d/1HjJ7IlWpp-f_OHEzestu3WqRP8exJnvm/view
 ## License
   []()
   
